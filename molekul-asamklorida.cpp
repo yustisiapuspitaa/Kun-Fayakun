@@ -18,14 +18,12 @@ int main(){
     Clx = 0.0;
 
     Hx = 0.0;
-    Hy = 0.0;
-    Hz = 0.0;
-
+   
     // memasukkan nilai tersebut ke dalam File
     ofstream file;
     file.open("asam klorida.xyz");
     file << "2\n" << endl;
-    file << setw(2) << "O" << setw(2) << " " \
+    file << setw(2) << "Cl" << setw(2) << " " \
     << fixed << setprecision(2) << Clx << setw(2) << " "\
     << fixed << setprecision(2) << Cly << setw(2) << " "\
     << fixed << setprecision(2) << Clz << "\n";
