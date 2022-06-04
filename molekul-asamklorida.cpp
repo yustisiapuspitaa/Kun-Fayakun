@@ -19,7 +19,7 @@ int main(){
 
     Hx = sin(0.0*pi/180) * 1.310;
     Hy = 0.0;
-    Hz = cos(0.0*pi/180)*1.310;
+    Hz = cos(0.0*pi/180) * 1.310;
    
     // memasukkan nilai tersebut ke dalam File
     ofstream file;
