@@ -10,14 +10,11 @@ int main(){
     // deklarasi variabel
     float pi = 3.14;
 
-    // deklarasi molekul metana
-    float Cx, Cy, Cz;
-    float H1x, H1y, H1z;
-    float H2x, H2y, H2z;
-    float H3x, H3y, H3z;
-    float H4x, H4y, H4z;
+    // deklarasi molekul asamklorida
+    float Clx, Cly, Clz;
+    float Hx, Hy, Hz;
 
-    // masukan nilai untuk setiap variabel CH4
+    // masukan nilai untuk setiap variabel HCl
     Cx = Cy = Cz = 0.0;
 
     H1x = sin(109.5*pi/180) * 1.090;
