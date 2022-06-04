@@ -15,23 +15,11 @@ int main(){
     float Hx, Hy, Hz;
 
     // masukan nilai untuk setiap variabel HCl
-    Cx = Cy = Cz = 0.0;
+    Clx = Cly = Clz = 0.0;
 
-    H1x = sin(109.5*pi/180) * 1.090;
-    H1y = 0.0;
-    H1z = - cos(109.5*pi/180) * 1.090;
-
-    H2x = - H1x;
-    H2y = H1y;
-    H2z = H1z;
-
-    H3x =  0.0;
-    H3y = cos(54.75*pi/180) * 1.090;
-    H3z = - sin(54.75*pi/180) * 1.090;
-
-    H4x =  H3x;
-    H4y = - H3y;
-    H4z =  H3z;
+    Hx = 0.0;
+    Hy = 0.0;
+    Hz = 0.0;
 
     // memasukkan nilai tersebut ke dalam File
     ofstream file;
