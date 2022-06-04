@@ -15,7 +15,7 @@ int main(){
     float Hx;
 
     // masukan nilai untuk setiap variabel HCl
-    Clx = Cly = Clz = 0.0;
+    Clx = 0.0;
 
     Hx = 0.0;
     Hy = 0.0;
