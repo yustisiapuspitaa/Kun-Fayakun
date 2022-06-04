@@ -11,8 +11,8 @@ int main(){
     float pi = 3.14;
 
     // deklarasi molekul asamklorida
-    float Clx, Cly, Clz;
-    float Hx, Hy, Hz;
+    float Clx;
+    float Hx;
 
     // masukan nilai untuk setiap variabel HCl
     Clx = Cly = Clz = 0.0;
