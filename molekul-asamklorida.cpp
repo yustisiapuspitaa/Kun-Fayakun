@@ -23,32 +23,17 @@ int main(){
 
     // memasukkan nilai tersebut ke dalam File
     ofstream file;
-    file.open("metana.xyz");
-    file << "5\n" << endl;
-    file << setw(5) << "C" << setw(5) << " " \
-    << fixed << setprecision(5) << Cx << setw(5) << " "\
-    << fixed << setprecision(5) << Cy << setw(5) << " "\
-    << fixed << setprecision(5) << Cz << "\n";
+    file.open("asam klorida.xyz");
+    file << "2\n" << endl;
+    file << setw(2) << "O" << setw(2) << " " \
+    << fixed << setprecision(2) << Clx << setw(2) << " "\
+    << fixed << setprecision(2) << Cly << setw(2) << " "\
+    << fixed << setprecision(2) << Clz << "\n";
 
-    file << setw(5) << "H" << setw(5) << " " \
-    << fixed << setprecision(5) << H1x << setw(5) << " "\
-    << fixed << setprecision(5) << H1y << setw(5) << " "\
-    << fixed << setprecision(5) << H1z << "\n";
-
-    file << setw(5) << "H" << setw(5) << " " \
-    << fixed << setprecision(5) << H2x << setw(5) << " "\
-    << fixed << setprecision(5) << H2y << setw(5) << " "\
-    << fixed << setprecision(5) << H2z << "\n";
-
-    file << setw(5) << "H" << setw(5) << " " \
-    << fixed << setprecision(5) << H3x << setw(5) << " "\
-    << fixed << setprecision(5) << H3y << setw(5) << " "\
-    << fixed << setprecision(5) << H3z << "\n";
-
-    file << setw(5) << "H" << setw(5) << " " \
-    << fixed << setprecision(5) << H4x << setw(5) << " "\
-    << fixed << setprecision(5) << H4y << setw(5) << " "\
-    << fixed << setprecision(5) << H4z << "\n";
+    file << setw(2) << "H" << setw(2) << " " \
+    << fixed << setprecision(2) << Hx << setw(2) << " "\
+    << fixed << setprecision(2) << Hy << setw(2) << " "\
+    << fixed << setprecision(2) << Hz << "\n";
 
     file.close(); 
 
