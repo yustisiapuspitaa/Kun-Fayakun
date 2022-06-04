@@ -15,9 +15,9 @@ int main(){
     float Clx, Cly, Clz;
 
     // masukan nilai untuk setiap variabel HCl
-    Clx = 0.0;
+    Clx = Cly = Clz = 0.0;
 
-    Hx = 0.0;
+    Hx = sin(0.0*pi/180) * 1.310;
    
     // memasukkan nilai tersebut ke dalam File
     ofstream file;
