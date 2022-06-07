@@ -45,24 +45,24 @@ int main(){
     N = (pow(numb_lat,3)) * 3;
     volum = (float)N / numb_mol;
 
-  // masukan nilai untuk setiap variabel
-    O1x = O1y = O1z = 0.0;
+    // panjang sel simulasi secara perhitungan
+    lx = pow(volum,(1.0/3.0));
+    ly = lx;
+    lz = lx;
+    if(lx < (2*rcut)){
+        cout << "sorry mazeh, sel simulasi kamu besar";
+        exit(0);
+    } else{
+        cout << "panjang sek simulasi baru: " << lx << endl;
+    }
+    lat = lx / (float)numb_lat;
 
-    O2x = sin(54,73*pi/180) * 3.515;
-    O2y = 0.0;
-    O2z = cos(54,73*pi/180) * 3.515;
-
-    O3x = - O2x;
-    O3y = O2y;
-    O3z = O2z;
-
-    Fe1x = sin(54,73*pi/180) * 1.900;
-    Fe1y = 0.0;
-    Fe1z = cos(54,73*pi/180) * 1.900;
-
-    Fe2x = - Fe1x;
-    Fe2y = Fe1y;
-    Fe2z = Fe1z;
+    // deklarasi variabel
+    float pi = 3.14;
+    
+    // deklarasi molekul besillloksida
+    float Fe1x[8], Fe2x[8], Fe1y[8], Fe2y[8], Fe1z[8], Fe2z[8];
+    float O1x[8], O2x[8], O3X[8], O1y[8], O2y[8], O3y[8], O1z[8], O2z[8], O3z [8];
 
     // memasukan nilai tersebut ke dalam file
     ofstream file;
