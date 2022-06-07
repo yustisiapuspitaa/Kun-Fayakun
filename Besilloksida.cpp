@@ -128,3 +128,38 @@ int main(){
             dx = dx - round(dx/lx) * lx;
             dy = dy - round(dy/ly) * ly;
             dz = dz - round(dz/lz) * lz;
+
+          
+          
+           rij = pow(dx,2) + pow(dy,2) + pow(dz,2);
+            if(rij < rcut2){
+                rij6 = pow(rij,3);
+                rij12 = pow(rij6,2);
+                Ep = (A12/rij12) - (B6/rij6);
+                Ep_LJ = (A12/rij12) - (B6/rij6);
+                Ep += Ep_LJ;
+            }
+        }
+    }
+
+    cout << "Energi potensial dari molekul besillloksida ruah: " \
+         << Ep/(float)N << "kJ/mol";
+
+    // hasil iterasi dimasukkan ke dalam file xyz
+    ofstream file;
+    file.open("besillloksida-hitung_ep.xyz");
+    file << N << "\n" << endl;
+
+    int Nw = N/5;
+
+    // iterasi dalam output array
+    for(int m = 0; m < Nw; m++){
+         file << setw(5) << "Fe1" << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe1x[m] << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe1y[m] << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe1z[m] << "\n";
+
+        file << setw(5) << "Fe2" << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe2x[m] << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe2y[m] << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe2z[m] << "\n";
