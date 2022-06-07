@@ -91,3 +91,20 @@ int main(){
         for(int i = 0; i < numb_lat; i++){ //x
            for(int j = 0; j < numb_lat; j++){ //y
                for(int k = 0; k < numb_lat; k++){ //z 
+
+                Fe1x[counter] = rB_Fe1x + (i*3.01);
+                Fe2x[counter] = rB_Fe2x + (i*3.01);
+                Fe1y[counter] = rB_Fe1y + (j*3.01);
+                Fe2y[counter] = rB_Fe2y + (j*3.01);
+                Fe1z[counter] = rB_Fe1z + (k*3.01);
+                Fe2z[counter] = rB_Fe2z + (k*3.01);
+
+                O1x[counter] = O1x[counter] + rB_O1x;
+                O2x[counter] = O2x[counter] + rB_O2x;
+                O3z[counter] = O3z[counter] + rB_O3x;
+                O1y[counter] = O1y[counter] + rB_O1y;
+                O2y[counter] = O2y[counter] + rB_O2y;
+                O3y[counter] = O3y[counter] + rB_O3y;
+                O1z[counter] = O1z[counter] + rB_O1z;
+                O2z[counter] = O2z[counter] + rB_O2z;
+                O3z[counter] = O3z[counter] + rB_O3z;
