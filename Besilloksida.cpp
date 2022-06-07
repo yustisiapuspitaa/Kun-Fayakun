@@ -21,17 +21,31 @@ float volum;                    // volume dari molekul besillloksida
 float lx, ly, lz;               // panjang sel simulasi terhitung 
 float lat;                      // jarak antar molekul besillloksida
 int main(){
+
+  // variabel perhitungan energi potensial
+float sigma = 2.725;            // satuan (A)
+float epsilon = 3.725;          // satuan (kj/mol)
+float rij, rcut, rcut2;
+float Ep, Ep_LJ, A12, B6;
+float rij6, rij12;
+float dx, dy, dz;
+
+int main(){
     
+    rcut = 3 * sigma;
+    rcut2 = pow(rcut,2);
+    
+    cout << "program menghitung energi potensial dari besillloksida" << endl;
+    cout << "Masukkan nilai densitas dari asamklorida (eg. 1.0): ";
+    cin >> densitas;
 
-    // deklarasi molekul ferioksida
-    float O1x, O1y, O2z;
-    float O2x, O2y, O2z;
-    float O3x, O3y, O3z;
-    float Fe1x, Fe1y, Fe1z;
-    float Fe2x, Fe2y, Fe3y;
+    numb_mol = densitas * (Na / Mr_besillloksida) * cm3_to_A3;
+    cout << "Masukkan panjang sel simulasi (eg. 5): ";
+    cin >> numb_lat;
+    N = (pow(numb_lat,3)) * 3;
+    volum = (float)N / numb_mol;
 
-
-    // masukan nilai untuk setiap variabel
+  // masukan nilai untuk setiap variabel
     O1x = O1y = O1z = 0.0;
 
     O2x = sin(54,73*pi/180) * 3.515;
