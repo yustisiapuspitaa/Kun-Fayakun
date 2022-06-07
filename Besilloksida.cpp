@@ -64,34 +64,18 @@ int main(){
     float Fe1x[8], Fe2x[8], Fe1y[8], Fe2y[8], Fe1z[8], Fe2z[8];
     float O1x[8], O2x[8], O3X[8], O1y[8], O2y[8], O3y[8], O1z[8], O2z[8], O3z [8];
 
-    // memasukan nilai tersebut ke dalam file
-    ofstream file;
-    file.open("ferioksida.xyz");
-    file << "5\n" << endl;
-    file << setw(5) << "O" << setw(5) << " "\
-    << fixed << setprecision(5) << O1x << setw(5) << " "\
-    << fixed << setprecision(5) << O1y << setw(5) << " "\
-    << fixed << setprecision(5) << O1z << "\n";
+    /*            O   O   O
+                   \ / \ /
+                    F   F
+     molekul besillloksida itu bentuk rigid
+   */
 
-    file << setw(5) << "O" << setw(5) << " "\
-    << fixed << setprecision(5) << O2x << setw(5) << " "\
-    << fixed << setprecision(5) << O2y << setw(5) << " "\
-    << fixed << setprecision(5) << O2z << "\n";
-
-    file << setw(5) << "O" << setw(5) << " "\
-    << fixed << setprecision(5) << O3x << setw(5) << " "\
-    << fixed << setprecision(5) << O3y << setw(5) << " "\
-    << fixed << setprecision(5) << O3z << "\n";
-
-    file << setw(5) << "Fe" << setw(5) << " "\
-    << fixed << setprecision(5) << Fe1x << setw(5) << " "\
-    << fixed << setprecision(5) << Fe1y << setw(5) << " "\
-    << fixed << setprecision(5) << Fe1z << "\n";
-
-    file << setw(5) << "Fe" << setw(5) << " "\
-    << fixed << setprecision(5) << Fe2x << setw(5) << " "\
-    << fixed << setprecision(5) << Fe2y << setw(5) << " "\
-    << fixed << setprecision(5) << Fe2z << "\n";
+    float rB_Fe1x = sin(180.0*pi/180.0) * 1.900;;
+    float rB_Fe2x = sin(180.0*pi/180.0) * 1.900;;
+    float rB_Fe1y = 0.0;
+    float rB_Fe2y = 0.0;
+    float rB_Fe1z = cos(180.0*pi/180.0) * 1.900;
+    float rB_Fe2z = cos(180.0*pi/180.0) * 1.900;
 
     file.closed();
 
