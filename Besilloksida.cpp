@@ -154,6 +154,7 @@ int main(){
 
     // iterasi dalam output array
     for(int m = 0; m < Nw; m++){
+
          file << setw(5) << "Fe1" << setw(5) <<" "\
              << fixed << setprecision(5) << Fe1x[m] << setw(5) <<" "\
              << fixed << setprecision(5) << Fe1y[m] << setw(5) <<" "\
@@ -163,3 +164,24 @@ int main(){
              << fixed << setprecision(5) << Fe2x[m] << setw(5) <<" "\
              << fixed << setprecision(5) << Fe2y[m] << setw(5) <<" "\
              << fixed << setprecision(5) << Fe2z[m] << "\n";
+ 
+            file << setw(5) << "O1" << setw(5) <<" "\
+              << fixed << setprecision(5) << O1x[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O1y[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O1z[m] << "\n";
+
+         file << setw(5) << "O2" << setw(5) <<" "\
+              << fixed << setprecision(5) << O2x[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O2y[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O2z[m] << "\n";
+
+          file << setw(5) << "O3" << setw(5) <<" "\
+              << fixed << setprecision(5) << O3z[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O3y[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O3z[m] << "\n";
+    }   
+
+    file.close();
+
+    return 0;
+}
