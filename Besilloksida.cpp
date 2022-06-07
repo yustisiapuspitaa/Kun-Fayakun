@@ -77,9 +77,17 @@ int main(){
     float rB_Fe1z = cos(180.0*pi/180.0) * 1.900;
     float rB_Fe2z = cos(180.0*pi/180.0) * 1.900;
 
-    file.closed();
-
-    cout << "program selesai!";
-
-    return 0;
-}
+    float rB_O1x = sin(180.0*pi/180.0) * 1.900;
+    float rB_O2x = sin(180.0*pi/180.0) * 1.900;
+    float rB_O3x = sin(180.0*pi/180.0) * 1.900;
+    float rB_O1y = 0.0;
+    float rB_O2y = 0.0;
+    float rB_O3y = 0.0;
+    float rB_O1z = cos(180.0*pi/180.0) * 1.900;
+    float rB_O2z = cos(180.0*pi/180.0) * 1.900;
+    float rB_O3z = cos(180.0*pi/180.0) * 1.900;
+   
+    int counter = 0;
+        for(int i = 0; i < numb_lat; i++){ //x
+           for(int j = 0; j < numb_lat; j++){ //y
+               for(int k = 0; k < numb_lat; k++){ //z 
