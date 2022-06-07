@@ -108,3 +108,23 @@ int main(){
                 O1z[counter] = O1z[counter] + rB_O1z;
                 O2z[counter] = O2z[counter] + rB_O2z;
                 O3z[counter] = O3z[counter] + rB_O3z;
+
+                counter += 1;
+           }
+        }
+    }
+    // main hitung energi potensial
+    A12 = 4.0 * epsilon * pow(sigma,12);
+    B6 = 4.0 * epsilon * pow(sigma, 6);
+
+    Ep = 0.0;
+    for(int a = 0; a < (N-1); a++){
+        for(int b = (0+1); b < N; b++){
+            
+            dx = Fe2x[a] - Fe2x[b];
+            dy = Fe2y[a] - Fe2y[b];
+            dz = Fe2z[a] - Fe2z[b];
+
+            dx = dx - round(dx/lx) * lx;
+            dy = dy - round(dy/ly) * ly;
+            dz = dz - round(dz/lz) * lz;
