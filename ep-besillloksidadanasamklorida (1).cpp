@@ -96,4 +96,133 @@ int main(){
     float rB_O3z = cos(180.0*pi/180.0) * 1.900;
 
     float rB_Clx = 0.0;
+    float rB_Cly = 0.0;
+    float rB_Clz = 0.0;
 
+    float rB_Hx = sin(0.0*pi/180.0) * 1.310;
+    float rB_Hy = 0.0;
+    float rB_Hz = cos (0.0*pi/180.0) * 1.310;
+   
+    ;int counter = 0;
+        for(int i = 0; i < numb_lat; i++){ //x
+           for(int j = 0; j < numb_lat; j++){ //y
+               for(int k = 0; k < numb_lat; k++){ //z 
+                
+                Fe1x[counter] = rB_Fe1x + (i*3.01);
+                Fe2x[counter] = rB_Fe2x + (i*3.01);
+                Fe1y[counter] = rB_Fe1y + (j*3.01);
+                Fe2y[counter] = rB_Fe2y + (j*3.01);
+                Fe1z[counter] = rB_Fe1z + (k*3.01);
+                Fe2z[counter] = rB_Fe2z + (k*3.01);
+                 O1x[counter] = O1x[counter] + rB_O1x;
+                O2x[counter] = O2x[counter] + rB_O2x;
+                O3z[counter] = O3z[counter] + rB_O3x;
+                O1y[counter] = O1y[counter] + rB_O1y;
+                O2y[counter] = O2y[counter] + rB_O2y;
+                O3y[counter] = O3y[counter] + rB_O3y;
+                O1z[counter] = O1z[counter] + rB_O1z;
+                O2z[counter] = O2z[counter] + rB_O2z;
+                O3z[counter] = O3z[counter] + rB_O3z;
+
+                Clx[counter] = rB_Clx + (i*3.01);
+                Cly[counter] = rB_Cly + (j*3.01);
+                Clz[counter] = rB_Clz + (k*3.01);
+
+                Hx[counter] = Clx[counter] + rB_Hx;
+                Hy[counter] = Cly[counter] + rB_Hy;
+                Hz[counter] = Clz[counter] + rB_Hz;
+
+                counter += 1;
+           }
+        }
+    }
+    // main hitung energi potensial
+    A12 = 4.0 * epsilon * pow(sigma,12);
+    B6 = 4.0 * epsilon * pow(sigma, 6);
+
+    Ep = 0.0;
+    for(int a = 0; a < (N-1); a++){
+        for(int b = (0+1); b < N; b++){
+            
+            dx = Fe2x[a] - Fe2x[b];
+            dy = Fe2y[a] - Fe2y[b];
+            dz = Fe2z[a] - Fe2z[b];
+             
+            dx = Clx[a] - Clx[b];
+            dy = Cly[a] - Cly[b];
+            dz = Clz[a] - Clz[b];
+
+            dx = dx - round(dx/lx) * lx;
+            dy = dy - round(dy/ly) * ly;
+            dz = dz - round(dz/lz) * lz;
+
+
+
+            rij = pow(dx,2) + pow(dy,2) + pow(dz,2);
+            if(rij < rcut2){
+                rij6 = pow(rij,3);
+                rij12 = pow(rij6,2);
+                Ep = (A12/rij12) - (B6/rij6);
+                Ep_LJ = (A12/rij12) - (B6/rij6);
+                Ep += Ep_LJ;
+            }
+        }
+    }
+
+    cout << "Energi potensial dari molekul besillloksidadanasamklorida ruah: " \
+         << Ep/(float)N << "kJ/mol";
+
+    // hasil iterasi dimasukkan ke dalam file xyz
+    ofstream file;
+    file.open("besillloksidadanasamklorida-hitung_ep.xyz");
+    file << N << "\n" << endl;
+
+    int Nw = N/5;
+
+    // iterasi dalam output array
+    for(int m = 0; m < Nw; m++){
+         file << setw(5) << "Fe1" << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe1x[m] << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe1y[m] << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe1z[m] << "\n";
+
+        file << setw(5) << "Fe2" << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe2x[m] << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe2y[m] << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe2z[m] << "\n";
+
+        file << setw(5) << "O1" << setw(5) <<" "\
+              << fixed << setprecision(5) << O1x[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O1y[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O1z[m] << "\n";
+
+         file << setw(5) << "O2" << setw(5) <<" "\
+              << fixed << setprecision(5) << O2x[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O2y[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O2z[m] << "\n";
+
+          file << setw(5) << "O3" << setw(5) <<" "\
+              << fixed << setprecision(5) << O3z[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O3y[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O3z[m] << "\n";
+    
+         int Nw = N/2;
+
+         // iterasi dalam output array
+    for(int m = 0; m < Nw; m++){
+         file << setw(2) << "Cl" << setw(2) <<" "\
+             << fixed << setprecision(2) << Clx[m] << setw(2) <<" "\
+             << fixed << setprecision(2) << Cly[m] << setw(2) <<" "\
+             << fixed << setprecision(2) << Clz[m] << "\n";
+
+         file << setw(2) << "H" << setw(2) <<" "\
+              << fixed << setprecision(2) << Hx[m] << setw(2) <<" "\
+              << fixed << setprecision(2) << Hy[m] << setw(2) <<" "\
+              << fixed << setprecision(2) << Hz[m] << "\n";       
+    }   
+
+    file.close();
+
+    return 0;
+    
+    }
