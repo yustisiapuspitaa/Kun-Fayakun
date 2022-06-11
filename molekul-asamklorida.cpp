@@ -46,3 +46,8 @@ int main(){
         }
     }
 
+    // hasil iterasi dimasukan ke dalam file xyz
+    ofstream file;
+    file.open("asamklorida-ruah.xyz");
+    int N = 125 * 2;
+    file << N << "\n" << endl;
