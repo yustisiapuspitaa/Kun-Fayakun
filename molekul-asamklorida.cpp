@@ -37,9 +37,12 @@ int main(){
                 Cly[counter] = rB_Cly + (j*3.01);
                 Clz[counter] = rB_Clz + (k*3.01);
 
-    file.close(); 
+                Hx[counter] = Clx[counter] + rB_Hx;
+                Hy[counter] = Cly[counter] + rB_Hy;
+                Hz[counter] = Clz[counter] + rB_Hz;
 
-    cout << "program selesai!";
+                 counter += 1;
+            }
+        }
+    }
 
-    return 0;
-}
