@@ -32,6 +32,10 @@ int main(){
     for(int i = 0; i < 5; i++){
         for(int j = 0; j < 5; j++){
             for(int k = 0; k < 5; k++){
+ 
+                Clx[counter] = rB_Clx + (i*3.01);
+                Cly[counter] = rB_Cly + (j*3.01);
+                Clz[counter] = rB_Clz + (k*3.01);
 
     file.close(); 
 
