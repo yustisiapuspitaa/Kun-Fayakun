@@ -51,3 +51,11 @@ int main(){
     file.open("asamklorida-ruah.xyz");
     int N = 125 * 2;
     file << N << "\n" << endl;
+
+        // iterasi dalam output array
+    for(int m = 0; m < 125; m++){
+        file << setw(2) << "Cl" << setw(2) <<" "\
+             << fixed << setprecision(2) << Clx[m] << setw(2) <<" "\
+             << fixed << setprecision(2) << Cly[m] << setw(2) <<" "\
+             << fixed << setprecision(2) << Clz[m] << "\n";
+
