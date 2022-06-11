@@ -9,10 +9,12 @@ using namespace std;
 int main(){
     // deklarasi variabel
     float pi = 3.14;
+    int counter = 0;
 
-    // deklarasi molekul asamklorida
-    float Hx, Hy, Hz;
-    float Clx, Cly, Clz;
+    // deklarasi molekul asam klorida
+    float Clx[125], Cly[125], Clz[125];
+    float Hx[125], Hy[125], Hz[125];
+    
 
     // masukan nilai untuk setiap variabel HCl
     Clx = Cly = Clz = 0.0;
