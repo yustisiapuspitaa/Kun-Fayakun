@@ -27,21 +27,11 @@ int main(){
     float rB_Hx = -sin(0.0*pi/180.0)*1.310
     float rB_Hy = 0.0;
     float rB_Hz = cos(0.0*pi/180.0)*1.310;
-
-
-    // memasukkan nilai tersebut ke dalam File
-    ofstream file;
-    file.open("asam klorida.xyz");
-    file << "2\n" << endl;
-    file << setw(2) << "Cl" << setw(2) << " " \
-    << fixed << setprecision(2) << Clx << setw(2) << " "\
-    << fixed << setprecision(2) << Cly << setw(2) << " "\
-    << fixed << setprecision(2) << Clz << "\n";
-
-    file << setw(2) << "H" << setw(2) << " " \
-    << fixed << setprecision(2) << Hx << setw(2) << " "\
-    << fixed << setprecision(2) << Hy << setw(2) << " "\
-    << fixed << setprecision(2) << Hz << "\n";
+    
+    // iterasi untuk setiap molekul asam klorida
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 5; j++){
+            for(int k = 0; k < 5; k++){
 
     file.close(); 
 
