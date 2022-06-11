@@ -59,3 +59,17 @@ int main(){
              << fixed << setprecision(2) << Cly[m] << setw(2) <<" "\
              << fixed << setprecision(2) << Clz[m] << "\n";
 
+        file << setw(2) << "H" << setw(2) <<" "\
+              << fixed << setprecision(2) << Hx[m] << setw(2) <<" "\
+              << fixed << setprecision(2) << Hy[m] << setw(2) <<" "\
+              << fixed << setprecision(2) << Hz[m] << "\n";
+}
+
+
+file.close();
+
+cout << "program telah selesai";
+
+return 0;
+
+}
