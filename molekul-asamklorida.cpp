@@ -15,9 +15,14 @@ int main(){
     float Clx[125], Cly[125], Clz[125];
     float Hx[125], Hy[125], Hz[125];
     
+       /*               Cl - H 
+            molekul asamklorida itu bentuk rigid
+    */
 
-    // masukan nilai untuk setiap variabel HCl
-    Clx = Cly = Clz = 0.0;
+
+    float rB_Clx = 0.0;
+    float rB_Cly = 0.0;
+    float rB_Clz = 0.0;
 
     Hx = sin(0.0*pi/180) * 1.310;
     Hy = 0.0;
