@@ -23,11 +23,12 @@ int main(){
     float rB_Clx = 0.0;
     float rB_Cly = 0.0;
     float rB_Clz = 0.0;
+    
+    float rB_Hx = -sin(0.0*pi/180.0)*1.310
+    float rB_Hy = 0.0;
+    float rB_Hz = cos(0.0*pi/180.0)*1.310;
 
-    Hx = sin(0.0*pi/180) * 1.310;
-    Hy = 0.0;
-    Hz = cos(0.0*pi/180) * 1.310;
-   
+
     // memasukkan nilai tersebut ke dalam File
     ofstream file;
     file.open("asam klorida.xyz");
