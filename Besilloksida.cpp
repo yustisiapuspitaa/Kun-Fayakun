@@ -17,7 +17,7 @@ Int main(){
     float Fe1x[125], Fe2x[125], Fe1y[125], Fe2y[125], Fe1z[125], Fe2z[125];
     float O1x[125], O2x[125], O3X[125], O1y[125], O2y[125], O3y[125], O1z[125], O2z[125], O3z[125]; 
     
-       /*               O    O    O
+       /*           O    O    O
                      \\ / \ //
                       Fe   Fe
                   molekul besillloksida itu bentuk rigid
