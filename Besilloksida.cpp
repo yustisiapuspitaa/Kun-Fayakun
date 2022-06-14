@@ -94,3 +94,17 @@ Int main(){
               << fixed << setprecision(5) << O2x[m] << setw(5) <<" "\
               << fixed << setprecision(5) << O2y[m] << setw(5) <<" "\
               << fixed << setprecision(5) << O2z[m] << "\n";
+
+                   file << setw(5) << "O3" << setw(5) <<" "\
+              << fixed << setprecision(5) << O3z[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O3y[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O3z[m] << "\n";
+}
+
+
+   file.close();
+
+   cout << "program telah selesai";
+
+   return 0;
+}
