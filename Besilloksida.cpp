@@ -87,3 +87,10 @@ Int main(){
 
         file << setw(5) << "O1" << setw(5) <<" "\
               << fixed << setprecision(5) << O1x[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O1y[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O1z[m] << "\n";
+
+         file << setw(5) << "O2" << setw(5) <<" "\
+              << fixed << setprecision(5) << O2x[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O2y[m] << setw(5) <<" "\
+              << fixed << setprecision(5) << O2z[m] << "\n";
