@@ -31,3 +31,13 @@ Int main(){
     float rB_Fe1z = cos(109.471*pi/180.0) * 1.615;
     float rB_Fe2z = cos(109.471*pi/180.0) * 1.615;
 
+    float rB_O1x = sin(109.471*pi/180.0) * 1.615;
+    float rB_O2x = sin(109.471*pi/180.0) * 1.615;
+    float rB_O3x = sin(109.471*pi/180.0) * 1.615;
+    float rB_O1y = 0.0;
+    float rB_O2y = 0.0;
+    float rB_O3y = 0.0;
+    float rB_O1z = cos(109.471*pi/180.0) * 1.615;
+    float rB_O2z = cos(109.471*pi/180.0) * 1.615;
+    float rB_O3z = cos(109.471*pi/180.0) * 1.615;
+
