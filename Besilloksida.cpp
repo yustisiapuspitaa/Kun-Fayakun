@@ -40,4 +40,12 @@ Int main(){
     float rB_O1z = cos(109.471*pi/180.0) * 1.615;
     float rB_O2z = cos(109.471*pi/180.0) * 1.615;
     float rB_O3z = cos(109.471*pi/180.0) * 1.615;
-
+  
+    // iterasi untuk setiap molekul asam klorida
+    for(int i = 0; i < 5; i++){
+        for(int j = 0; j < 5; j++){
+            for(int k = 0; k < 5; k++){
+                
+                Fe1x[counter] = rB_Fe1x + (i*3.01);
+                Fe2x[counter] = rB_Fe2x + (i*3.01);
+                Fe1y[counter] = rB_Fe1y + (j*3.01);
