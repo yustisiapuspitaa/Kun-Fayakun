@@ -41,7 +41,7 @@ Int main(){
     float rB_O2z = cos(109.471*pi/180.0) * 1.615;
     float rB_O3z = cos(109.471*pi/180.0) * 1.615;
   
-    // iterasi untuk setiap molekul asam klorida
+    // hasil iterasi untuk setiap molekul asam klorida
     for(int i = 0; i < 5; i++){
         for(int j = 0; j < 5; j++){
             for(int k = 0; k < 5; k++){
@@ -68,3 +68,15 @@ Int main(){
         }
     }
 
+    // hasil iterasi dimasukan ke dalam file xyz
+    ofstream file;
+    file.open("besillloksida-ruah.xyz");
+    int N = 125 * 5;
+    file << N << "\n" << endl;
+
+    // iterasi dalam output array
+    for(int m = 0; m < 8; m++){
+        file << setw(5) << "Fe1" << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe1x[m] << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe1y[m] << setw(5) <<" "\
+             << fixed << setprecision(5) << Fe1z[m] << "\n";
